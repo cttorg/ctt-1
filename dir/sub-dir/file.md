@@ -1,1 +1,1 @@
-new filed updated in director
+new filed updated in directory
