@@ -1,0 +1,21 @@
+name: Lint
+
+on: pull_request
+
+jobs:
+  black:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3
+        uses: actions/setup-python@v3
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install black==22.3.0
+      - name: Running black
+        id: set-envs
+        run: |
+            echo "WF ran successful"
